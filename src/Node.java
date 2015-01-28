@@ -46,6 +46,30 @@ public class Node {
 	}
 	
 	/**
+	 * Sets the parent
+	 * @param inputNode
+	 */
+	public void setParent (Node inputNode) {
+		parent = inputNode;
+	}
+	
+	/**
+	 * Sets the left child
+	 * @param inputNode
+	 */
+	public void setLeftChild (Node inputNode) {
+		leftChild = inputNode;
+	}
+	
+	/**
+	 * Sets the right child
+	 * @param inputNode
+	 */
+	public void setRightChild (Node inputNode) {
+		rightChild = inputNode;
+	}
+	
+	/**
 	 * Returns the data of the node.
 	 * @return
 	 */
