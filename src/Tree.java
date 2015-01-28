@@ -39,7 +39,7 @@ public class Tree {
 				newNode.setParent(currentNode);
 				currentNode.setRightChild(newNode);
 			} else {
-				Node newNode = new Node(currentNode.getData() + leftNeighbor.getData());
+				Node newNode = new Node(currentNode.getData() + rightNeighbor.getData());
 				newNode.setParent(currentNode);
 				currentNode.setRightChild(newNode);
 			}			
@@ -95,5 +95,19 @@ public class Tree {
 		}
 		
 		return null;
+	}
+	
+	public String printTree () {
+		return  origin.getData() + "-" + 
+					printTree(origin.getLeftChild()) + "-" + printTree(origin.getRightChild());
+	}
+	
+	public String printTree (Node currentNode) {
+		if(currentNode.getLeftChild() != null && currentNode.getRightChild() != null){
+			return currentNode.getData() + "-" +
+					printTree(currentNode.getLeftChild()) + "-" + printTree(currentNode.getRightChild());
+		} else {
+			return ""+currentNode.getData();
+		}
 	}
 }
